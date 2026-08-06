@@ -1,4 +1,4 @@
-package model;
+package com.example.java_database_capstone.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;

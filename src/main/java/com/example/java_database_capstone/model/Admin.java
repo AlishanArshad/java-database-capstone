@@ -1,4 +1,4 @@
-package model;
+package com.example.java_database_capstone.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;

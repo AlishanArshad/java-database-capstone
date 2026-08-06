@@ -1,5 +1,4 @@
-package model;
-
+package com.example.java_database_capstone.model;
 
 import org.springframework.data.annotation.Id;
 import jakarta.validation.constraints.NotNull;

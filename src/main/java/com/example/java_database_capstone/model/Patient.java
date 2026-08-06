@@ -1,38 +1,36 @@
-package model;
+package com.example.java_database_capstone.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.*;
 
-import java.util.List;
-
 @Entity
-public class Doctor {
+public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
     @Size(min = 3, max = 100)
+    @NotBlank
     private String name;
 
     @NotNull
-    @Size(min = 3, max = 50)
-    private String specialty;
-
     @Email
-    @NotNull
     private String email;
 
+    @NotNull
     @Size(min = 3)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
+    @NotNull
     @Pattern(regexp = "\\d{11}")
     private String phone;
 
-    @ElementCollection
-    private List<String> availableTimes;
+    @NotNull
+    @Size(max = 255)
+    private String address;
 
     public Long getId() {
         return id;
@@ -48,14 +46,6 @@ public class Doctor {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSpecialty() {
-        return specialty;
-    }
-
-    public void setSpecialty(String specialty) {
-        this.specialty = specialty;
     }
 
     public String getEmail() {
@@ -82,24 +72,23 @@ public class Doctor {
         this.phone = phone;
     }
 
-    public List<String> getAvailableTimes() {
-        return availableTimes;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAvailableTimes(List<String> availableTimes) {
-        this.availableTimes = availableTimes;
+    public void setAddress(String address) {
+        this.address = address;
     }
-    public Doctor(){
+    public Patient(){
 
     }
 
-    public Doctor(Long id, String name, String specialty, String email, String password, String phone, List<String> availableTimes) {
+    public Patient(Long id, String name, String email, String password, String phone, String address) {
         this.id = id;
         this.name = name;
-        this.specialty = specialty;
         this.email = email;
         this.password = password;
         this.phone = phone;
-        this.availableTimes = availableTimes;
+        this.address = address;
     }
 }
