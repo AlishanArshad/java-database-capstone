@@ -1,0 +1,5 @@
+com/example/java_database_capstone/model/Appointment.class
+com/example/java_database_capstone/model/Patient.class
+com/example/java_database_capstone/model/Admin.class
+com/example/java_database_capstone/model/Prescription.class
+com/example/java_database_capstone/model/Doctor.class
