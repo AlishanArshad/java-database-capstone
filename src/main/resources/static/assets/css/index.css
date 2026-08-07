@@ -1,0 +1,576 @@
+/* =========================
+   Global Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f6fa;
+    color: #333;
+}
+
+
+/* =========================
+   Main Wrapper
+========================= */
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    min-height: calc(100vh - 140px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   Headings
+========================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.main-content h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.role-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.role-buttons button {
+    min-width: 150px;
+    padding: 14px 30px;
+
+    background-color: #2563eb;
+    color: #fff;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.role-buttons button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   Modal
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+    z-index: 1000;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+
+    width: 90%;
+    max-width: 600px;
+
+    padding: 30px;
+
+    background-color: #fff;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.close,
+#closeModal {
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    background: transparent;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    color: #555;
+}
+
+.close:hover,
+#closeModal:hover {
+    color: #e11d48;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 40px;
+
+    background-color: #fff;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    z-index: 100;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    max-width: 160px;
+    height: auto;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header nav a {
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px 40px;
+
+    background-color: #111827;
+    color: #fff;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer a {
+    color: #d1d5db;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+
+/* =========================
+   Dashboard
+========================= */
+
+.dashboard {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+    margin: 0;
+}
+
+.dashboard-btn {
+    padding: 12px 22px;
+
+    background-color: #2563eb;
+    color: #fff;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.dashboard-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   Search & Filters
+========================= */
+
+.filter-section {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+}
+
+.input-field,
+.select-dropdown {
+    width: 100%;
+    max-width: 280px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    background-color: #fff;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.input-field:focus,
+.select-dropdown:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================
+   Doctor Cards
+========================= */
+
+.doctors-list {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,
+            minmax(280px, 1fr));
+
+    gap: 20px;
+}
+
+.doctor-card {
+    background-color: #fff;
+
+    padding: 22px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.doctor-card h3 {
+    margin-bottom: 10px;
+
+    color: #111827;
+
+    font-size: 20px;
+}
+
+.doctor-card p {
+    margin-bottom: 7px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.doctor-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+.doctor-actions button {
+    padding: 9px 14px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+}
+
+.edit-btn {
+    background-color: #f59e0b;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background-color: #d97706;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+
+/* =========================
+   Forms
+========================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   Checkbox Group
+========================= */
+
+.checkbox-group {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.checkbox-group input {
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .header nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-content h2 {
+        font-size: 28px;
+    }
+
+    .footer {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 25px 20px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .filter-section {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .input-field,
+    .select-dropdown {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .role-buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .role-buttons button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .modal-content {
+        padding: 25px 18px;
+    }
+}

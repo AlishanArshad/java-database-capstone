@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- CSS links for page-specific and global styles -->
+    <!-- CSS links with standard href fallbacks for local preview -->
+    <link rel="stylesheet" href="../../static/assets/css/adminDashboard.css"
+        th:href="@{/assets/css/adminDashboard.css}">
+    <link rel="stylesheet" href="../../static/assets/css/style.css" th:href="@{/assets/css/style.css}">
+
+    <!-- JavaScript files with defer -->
+    <script th:src="@{/js/render.js}" defer></script>
+    <script th:src="@{/js/util.js}" defer></script>
+    <script th:src="@{/js/components/header.js}" defer></script>
+    <script th:src="@{/js/components/footer.js}" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <!-- Dynamic Header (Header.js renders 'Add Doctor' button here) -->
+            <div id="header"></div>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <div class="controls-container">
+                    <!-- Search Bar -->
+                    <input type="text" id="searchBar" placeholder="search by doctor name" />
+
+                    <!-- Filter Section -->
+                    <div class="filter-section">
+                        <!-- Sort by Time -->
+                        <select id="timeSort">
+                            <option value="">Sort by Time</option>
+                            <option value="asc">Earliest Available</option>
+                            <option value="desc">Latest Available</option>
+                        </select>
+
+                        <!-- Filter by Specialty -->
+                        <select id="specialtyFilter">
+                            <option value="">All Specialties</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Dermatology">Dermatology</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Pediatrics">Pediatrics</option>
+                            <option value="General">General Practice</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Dynamic Doctor List Content Area -->
+                <div id="content"></div>
+            </main>
+
+            <!-- Dynamic Footer -->
+            <div id="footer"></div>
+        </div>
+    </div>
+
+    <!-- Modal for Adding Doctor -->
+    <div id="modal" class="modal">
+        <span id="closeModal" class="close">&times;</span>
+        <div id="modal-body">
+            <!-- Add Doctor form will be inserted dynamically -->
+        </div>
+    </div>
+
+    <!-- Admin Dashboard Service Scripts -->
+    <script type="module" th:src="@{/js/adminDashboard.js}" defer></script>
+    <script type="module" th:src="@{/js/components/doctorCard.js}" defer></script>
+</body>
+
+</html>

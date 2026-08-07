@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Global Layout Setup
+   ========================================================================== */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Push footer to the bottom */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* ==========================================================================
+   Header Component Styles
+   ========================================================================== */
+#header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 30px;
+}
+
+.logo a {
+    font-size: 22px;
+    font-weight: 700;
+    color: #015c5d;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 12px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #015c5d;
+}
+
+/* Header Action Buttons */
+.nav-menu .button,
+.nav-menu .adminBtn {
+    background-color: #015c5d;
+    color: #ffffff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.nav-menu .button:hover,
+.nav-menu .adminBtn:hover {
+    background-color: #017d7e;
+}
+
+.nav-menu .button:active,
+.nav-menu .adminBtn:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   Footer Component Styles
+   ========================================================================== */
+#footer {
+    margin-top: auto;
+}
+
+.footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 40px 30px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-branding {
+    max-width: 300px;
+}
+
+.footer-branding h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.footer-branding p {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.footer-column a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-wrapper {
+        padding: 12px 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-links {
+        gap: 30px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
