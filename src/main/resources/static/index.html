@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Your Role</title>
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
 
-    <!-- CSS -->
+    <!-- CSS Links -->
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -22,59 +23,39 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="wrapper">
 
-    <main>
-        <div class="container">
+            <!-- Header -->
+            <div id="header"></div>
 
-            <div class="wrapper">
+            <!-- Main Content -->
+            <main class="main-content">
+                <h2>Select Your Role</h2>
 
-                <!-- Header -->
-                <div id="header"></div>
+                <div class="role-buttons">
+                    <button id="adminBtn" class="button">Admin</button>
+                    <button id="doctorBtn" class="button">Doctor</button>
+                    <button id="patientBtn" class="button">Patient</button>
+                </div>
+            </main>
 
-                <!-- Main Content -->
-                <main class="main-content">
-
-                    <h2>Select Your Role</h2>
-
-                    <div class="role-buttons">
-                        <button id="adminBtn" onclick="selectRole('admin')">
-                            Admin
-                        </button>
-
-                        <button id="doctorBtn" onclick="selectRole('doctor')">
-                            Doctor
-                        </button>
-
-                        <button id="patientBtn" onclick="selectRole('patient')">
-                            Patient
-                        </button>
-                    </div>
-
-                </main>
-
-                <!-- Footer -->
-                <div id="footer"></div>
-
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-
-            <button id="closeModal" type="button">
-                &times;
-            </button>
-
-            <div id="modal-body"></div>
+            <!-- Footer -->
+            <div id="footer"></div>
 
         </div>
     </div>
 
-    <!-- Role Selection Service -->
-    <script type="module" src="../js/services/index.js" defer></script>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" type="button">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
 
+    <!-- Role Selection Service Module -->
+    <script type="module" src="./js/services/index.js" defer></script>
 </body>
+
 </html>
