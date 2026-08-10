@@ -1,6 +1,4 @@
 /home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/JavaDatabaseCapstoneApplication.java
-/home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/model/Admin.java
-/home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/model/Appointment.java
-/home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/model/Doctor.java
-/home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/model/Patient.java
-/home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/model/Prescription.java
+/home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/controller/DashboardController.java
+/home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/service/TokenService.java
+/home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/service/TokenServiceImpl.java

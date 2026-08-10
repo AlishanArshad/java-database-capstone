@@ -1,6 +1,4 @@
-com/example/java_database_capstone/model/Appointment.class
-com/example/java_database_capstone/model/Doctor.class
-com/example/java_database_capstone/model/Admin.class
-com/example/java_database_capstone/model/Prescription.class
-com/example/java_database_capstone/model/Patient.class
+com/example/java_database_capstone/service/TokenServiceImpl.class
+com/example/java_database_capstone/service/TokenService.class
+com/example/java_database_capstone/controller/DashboardController.class
 com/example/java_database_capstone/JavaDatabaseCapstoneApplication.class
