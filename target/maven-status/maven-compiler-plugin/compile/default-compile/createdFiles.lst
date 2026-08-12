@@ -1,5 +1,6 @@
 com/example/java_database_capstone/repository/AppointmentRepository.class
 com/example/java_database_capstone/controller/AdminController.class
+com/example/java_database_capstone/config/JwtProperties.class
 com/example/java_database_capstone/dto/AppointmentDTO.class
 com/example/java_database_capstone/service/AppointmentService.class
 com/example/java_database_capstone/repository/DoctorRepository.class

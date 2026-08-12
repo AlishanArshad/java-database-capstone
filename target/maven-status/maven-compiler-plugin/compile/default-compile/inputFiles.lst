@@ -1,4 +1,5 @@
 /home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/JavaDatabaseCapstoneApplication.java
+/home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/config/JwtProperties.java
 /home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/controller/AdminController.java
 /home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/controller/AppointmentController.java
 /home/alishanarshad/IdeaProjects/java-database-capstone/src/main/java/com/example/java_database_capstone/controller/DashboardController.java
