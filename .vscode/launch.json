@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-JavaDatabaseCapstoneApplication<java-database-capstone>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.java_database_capstone.JavaDatabaseCapstoneApplication",
+            "projectName": "java-database-capstone",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

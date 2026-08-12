@@ -1,7 +1,5 @@
 package com.example.java_database_capstone.controller;
 
-import java.util.Map;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +11,6 @@ public class DashboardController {
 
     private final TokenService tokenService;
 
-    // Implicit injection: @Autowired is omitted on single-constructor classes
     public DashboardController(TokenService tokenService) {
         this.tokenService = tokenService;
     }
@@ -23,12 +20,13 @@ public class DashboardController {
      */
     @GetMapping("/adminDashboard/{token}")
     public String adminDashboard(@PathVariable String token) {
-        Map<String, String> validationResult = tokenService.validateToken(token, "admin");
-        
-        if (validationResult.isEmpty()) {
+
+        boolean valid = tokenService.validateToken(token, "admin");
+
+        if (valid) {
             return "admin/adminDashboard";
         }
-        
+
         return "redirect:http://localhost:8080";
     }
 
@@ -37,12 +35,14 @@ public class DashboardController {
      */
     @GetMapping("/doctorDashboard/{token}")
     public String doctorDashboard(@PathVariable String token) {
-        Map<String, String> validationResult = tokenService.validateToken(token, "doctor");
-        
-        if (validationResult.isEmpty()) {
+
+        boolean valid =
+                tokenService.validateToken(token, "doctor");
+
+        if (valid) {
             return "doctor/doctorDashboard";
         }
-        
+
         return "redirect:http://localhost:8080";
     }
 }
